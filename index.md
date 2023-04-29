@@ -10,6 +10,10 @@ hero:
   image:
     src: /me.png
     alt: Picture of me
+  actions:
+    - theme: brand
+      text: Resume
+      link: /resume
 
 features:
   - icon: 👨🏼‍💻
