@@ -21,16 +21,16 @@ hero:
 features:
   - icon: 👨🏼‍💻
     title: Front-end Development
-    details: Implementation of UI components from prototype to completed functionality. Mindful of reusability,
-      accessibility, and a pixel perfect representation of the designer's vision.
+    details: Barely holding on to the break-neck pace at which frameworks seem to keep popping out, I continue to call
+      myself a front-end expert for some reason.
   - icon: 🏗️
     title: Architecture
-    details: Develop robust solutions to leverage technology that best fits the problem at hand. Solid documentation
-      skills with a clear vision for expansion and extension.
+    details: I like to develop robust systems that use technology befitting the problem at hand. I like to think I can
+      occasionally make good decisions.
   - icon: ⚙️
     title: Back-end Development
-    details: Implementation of services from small company vertically scalable services to large horizontally scalable
-      microservices. Strong adherance to security and RESTful best practices.
+    details: In the land of of spaghetti code and feature flags that still aren't cleaned up, I do my best to keep
+      code clean and maintainable for all parties.
   - icon: 🚴🏼
     title: Peloton Enjoyer
-    details: I like to ride a stationary bike with the comfort of air conditioning.
+    details: I like to ride a bike that doesn't move in the comfort of air conditioning.
