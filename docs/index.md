@@ -12,8 +12,11 @@ hero:
     alt: Picture of me
   actions:
     - theme: brand
-      text: Resume
+      text: 📝 Resume
       link: /resume
+    - theme: alt
+      text: 🛠️ Projects
+      link: /projects
 
 features:
   - icon: 👨🏼‍💻

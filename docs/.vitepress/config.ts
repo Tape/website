@@ -8,6 +8,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Projects', link: '/projects' },
       { text: 'Resume', link: '/resume' },
     ],
 
