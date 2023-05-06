@@ -15,12 +15,16 @@ export default defineConfig({
     sidebar: [],
 
     footer: {
-      copyright: 'Copyright &copy; 2023-Present David Kosub'
+      copyright: 'Copyright &copy; 2023-Present David Kosub',
     },
 
     socialLinks: [
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/davidkosub/' },
       { icon: 'github', link: 'https://github.com/Tape' },
     ]
-  }
+  },
+
+  markdown: {
+    lineNumbers: true,
+  },
 });
