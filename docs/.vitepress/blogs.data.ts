@@ -1,16 +1,18 @@
 import { createContentLoader } from 'vitepress';
+import { Blog } from './theme/types/shared';
 
-export default createContentLoader('blog/*.md', {
-  excerpt: false,
+export default createContentLoader('blog/!(index).md', {
+  excerpt: true,
   includeSrc: false,
   render: false,
-  transform(rawData) {
-    return rawData
+  transform(raw) {
+    return raw
       .sort((a, b) => {
         return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date)
       })
-      .map(data => ({
-        date: new Date(data.frontmatter.date),
+      .map((data): Blog => ({
+        date: data.frontmatter.date,
+        excerpt: data.excerpt,
         title: data.frontmatter.title,
         url: data.url,
       }));

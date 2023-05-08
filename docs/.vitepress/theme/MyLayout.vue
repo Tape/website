@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme';
 import VPAsideBlogs from './components/VPAsideBlog.vue';
-import VPDocDate from './components/VPDocDate.vue';
+import VPBlog from './components/VPBlog.vue';
+import VPDocHeading from './components/VPDocHeading.vue';
 
 const { Layout } = DefaultTheme;
 </script>
@@ -12,7 +13,10 @@ const { Layout } = DefaultTheme;
       <VPAsideBlogs />
     </template>
     <template #doc-before>
-      <VPDocDate />
+      <VPDocHeading />
+    </template>
+    <template #doc-after>
+      <VPBlog />
     </template>
   </Layout>
 </template>

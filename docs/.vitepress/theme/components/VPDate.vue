@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { useData } from 'vitepress';
-import { computed } from 'vue';
+import { defineProps } from 'vue';
 
-const { frontmatter } = useData();
-
-const date = computed(() =>
-  frontmatter.value?.date && new Date(frontmatter.value.date)
-);
+defineProps<{
+  date: Date,
+}>();
 </script>
 
 <template>
-  <div class="VPDocDate" v-if="date">
+  <div class="VPDate">
     <time :datetime="date.toISOString()">
       {{
         date.toLocaleDateString('en-US', {

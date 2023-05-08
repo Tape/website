@@ -10,6 +10,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Projects', link: '/projects' },
       { text: 'Resume', link: '/resume' },
+      { text: 'Blog', link: '/blog/' },
     ],
 
     sidebar: [],

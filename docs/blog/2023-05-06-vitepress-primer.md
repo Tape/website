@@ -3,11 +3,11 @@ date: 2023-05-06
 title: VitePress Primer
 ---
 
-# VitePress Primer
-
 I figured I'd check out what the cool kids are doing these days for static site generation and began my search. Turns
 out a JavaScript tooling framework I had previously played around with had a solution available, so I took this as an
 opportunity to give it a try.
+
+---
 
 ## Getting Started
 

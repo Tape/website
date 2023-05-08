@@ -17,6 +17,9 @@ hero:
     - theme: alt
       text: 🛠️ Projects
       link: /projects
+    - theme: alt
+      text: 🧻 Blog
+      link: /blog/
 
 features:
   - icon: 👨🏼‍💻
