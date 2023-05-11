@@ -12,7 +12,7 @@ Source can be found on [GitHub](https://github.com/FFXIV-Tools/ffxiv-tools-web) 
 
 ::: details BACK-END TECHNOLOGIES
 - Kotlin
-- Spring Boot
+- Jooby
 - PostgreSQL
 :::
 
