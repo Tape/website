@@ -8,7 +8,14 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Projects', link: '/projects' },
+      {
+        text: 'Projects',
+        items: [
+          { text: 'FFXIV Tools', link: '/projects/ffxiv-tools' },
+          { text: 'OpenPSN', link: '/projects/openpsn' },
+          { text: 'This Website', link: '/projects/this-website' },
+        ],
+      },
       { text: 'Resume', link: '/resume' },
       { text: 'Blog', link: '/blog/' },
     ],
