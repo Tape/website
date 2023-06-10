@@ -1,13 +1,16 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { data as blogs } from '../../blogs.data';
+
+const latestBlogs = computed(() => blogs.slice(0, 5));
 </script>
 
 <template>
-  <div class="VPAsideBlog" :class="{ 'has-blogs': blogs.length > 0 }">
+  <div class="VPAsideBlog" :class="{ 'has-blogs': latestBlogs.length > 0 }">
     <div class="content">
       <div class="blog-title">Latest Blogs</div>
       <ul>
-        <li v-for="{ title, url } in blogs">
+        <li v-for="{ title, url } in latestBlogs">
           <a class="blog-link" :href="url" :title="title">{{ title }}</a>
         </li>
       </ul>
