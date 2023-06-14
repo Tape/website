@@ -7,10 +7,29 @@ import { data as allBlogs } from '../../blogs.data';
 const { frontmatter } = useData();
 const blogs = computed(() => {
   const maxEntries = frontmatter.value.blog?.maxEntries || 5;
-  console.log(maxEntries);
+
+  const latestBlogs = allBlogs.slice(0, maxEntries);
+
+  const oldBlogs = allBlogs.slice(maxEntries).reduce((yearMap, blog) => {
+    const date = new Date(blog.date);
+    const year = date.getFullYear();
+    const month = date.toLocaleString('default', { month: 'long' });
+
+    if (!yearMap.get(year)) {
+      yearMap.set(year, new Map());
+    }
+    const monthMap = yearMap.get(year);
+    if (!monthMap.get(month)) {
+      monthMap.set(month, []);
+    }
+    monthMap.get(month).push(blog);
+
+    return yearMap;
+  }, new Map());
+
   return {
-    latest: allBlogs.slice(0, maxEntries),
-    old: allBlogs.slice(maxEntries),
+    latest: latestBlogs,
+    old: oldBlogs,
   };
 });
 </script>
@@ -21,10 +40,18 @@ const blogs = computed(() => {
   </div>
   <div class="vp-doc">
     <h2>Past Blogs</h2>
-    <ul v-if="blogs.old.length">
-      <li v-for="{ date, title, url } in blogs.old">
-        {{ new Date(date).toLocaleDateString() }} - <a :href="url">{{ title }}</a>
-      </li>
-    </ul>
+      <section v-for="[year, months] in blogs.old">
+        <h3>{{ year }}</h3>
+        <ul>
+          <li v-for="[month, blogs] in months">
+            <strong>{{ month }}</strong>
+            <ul>
+              <li v-for="{ date, title, url } in blogs">
+                {{ new Date(date).toLocaleDateString() }} - <a :href="url">{{ title }}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
   </div>
 </template>
