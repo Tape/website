@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="VPBlogItem vp-doc" v-for="blog in blogs">
+  <div class="VPBlogItem" v-for="blog in blogs">
     <h2>{{ blog.title }} - <VPDate class="date" :date="new Date(blog.date)" /></h2>
     <div v-html="blog.excerpt" />
     <p>

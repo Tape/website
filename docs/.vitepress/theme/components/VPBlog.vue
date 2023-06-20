@@ -35,23 +35,23 @@ const blogs = computed(() => {
 </script>
 
 <template>
-  <div class="VPBlog" v-if="frontmatter.blog">
-    <VPBlogItem :blogs="blogs.latest" />
-  </div>
-  <div class="vp-doc">
+  <div class="vp-doc" v-if="frontmatter.blog">
+    <div class="VPBlog">
+      <VPBlogItem :blogs="blogs.latest" />
+    </div>
     <h2>Past Blogs</h2>
-      <section v-for="[year, months] in blogs.old">
-        <h3>{{ year }}</h3>
-        <ul>
-          <li v-for="[month, blogs] in months">
-            <strong>{{ month }}</strong>
-            <ul>
-              <li v-for="{ date, title, url } in blogs">
-                {{ new Date(date).toLocaleDateString() }} - <a :href="url">{{ title }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
+    <section v-for="[year, months] in blogs.old">
+      <h3>{{ year }}</h3>
+      <ul>
+        <li v-for="[month, blogs] in months">
+          <strong>{{ month }}</strong>
+          <ul>
+            <li v-for="{ date, title, url } in blogs">
+              {{ new Date(date).toLocaleDateString() }} - <a :href="url">{{ title }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
