@@ -15,9 +15,6 @@ hero:
       text: 📝 Resume
       link: /resume
     - theme: alt
-      text: 🛠️ Projects
-      link: /projects
-    - theme: alt
       text: 🧻 Blog
       link: /blog/
 
