@@ -5,7 +5,18 @@ export default defineConfig({
   title: 'David Kosub',
   description: 'Website and blog of the developer David Kosub located in San Antonio, Texas',
 
+  head: [
+    [
+      'link',
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+    ],
+  ],
+
+  lang: 'en-US',
+
   themeConfig: {
+    logo: '/logo.png',
+
     nav: [
       { text: 'Home', link: '/' },
       {
