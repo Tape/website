@@ -3,11 +3,22 @@
 
 ## 2022-Present - Sysco Labs
 
-::: info (2022-2024) Senior Software Engineer
-- Work on a small but efficient team that manages search capabilities end to end on a shop storefront that handles $20
+- Work on a small but efficient team that manages search capabilities end to end on a storefront that handles $20
   billion per year in revenue.
-- Maintain several ElasticSearch clusters on Elastic cloud. This included activities such as major version upgrades,
-  resource scaling, and extension automation.
+
+::: info (2024 -) Staff Software Engineer
+- Enhance machine learning processes using user and sales data to feed back into the search algorithm (ElasticSearch
+  rank eval, mean reciprocal rank optimization).
+- Experiment with hybrid search algorithms (vector, token) to provide more relevant user results.
+- Created a data lake (Delta Lake on S3) of product data to be used by development teams.
+- Improve the performance of product data ingestion to provide near-realtime product data updates in ElasticSearch from
+  millions of Kafka messages per day.
+:::
+
+::: info (2022 - 2024) Senior Software Engineer
+
+- Maintained several ElasticSearch clusters on Elastic cloud.
+  This included activities such as major version upgrades, resource scaling, and extension automation.
 - Designed, developed, and deployed a zero-downtime solution to migrate to multi-language and multi-seller search
   capabilities.
 - Theorized and experimented with improvements to search relevancy using machine learning.
