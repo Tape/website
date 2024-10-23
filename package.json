@@ -1,9 +1,9 @@
 {
   "name": "website",
   "type": "module",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.7.0+sha256.7bf0c78a106332886ea4e59641fd819b1af953edcd72c4d93a32b1c71000ee67",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.40"
+    "vitepress": "^1.4.1"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
