@@ -19,8 +19,8 @@ jobs:
           node-version: 20
       - run: |
           corepack enable
-          yarn install
-          yarn docs:build
+          pnpm install
+          pnpm docs:build
 
       - name: Publish
         uses: appleboy/scp-action@v0.1.4
